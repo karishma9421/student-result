@@ -1,0 +1,46 @@
+<html>
+	<head>
+		
+		<title>Result</title>
+
+		<script type="text/javascript">
+		
+		function getReport(){
+                    var  result="";
+					var sub1 = document.getElementById('sub1').value;
+					
+					var sub2 = document.getElementById('sub2').value;
+					var sub3 = document.getElementById('sub3').value;
+					
+				
+					var totalMarks = sub1 -(-sub2) - (- sub3);
+				
+					var averageMarks = totalMarks / 3;					
+				
+					document.getElementById('txtTotalMarks').value = totalMarks;
+					document.getElementById('txtAvgMarks').value = averageMarks;
+					
+		}
+		
+		</script>
+	</head>
+	<body>		
+			
+	    		
+				Name:<input type="text" id="txtName"> 
+				
+				<table border="1">
+					<td>sub1</td><td><input type="text" id="sub1"></td>
+					
+					<tr><td>sub2</td><td><input type="text" id="sub2"></td></tr>
+					<tr><td>sub3</td><td><input type="text" id="sub3"></td></tr>				
+				</table><br/><br/>
+				<input type="button" value="Get Result" onClick="getReport();">
+
+					<tr><td>Total Marks</td><td><input type="text" id="txtTotalMarks" readonly></td></tr>
+					<tr><td>Average Marks</td><td><input type="text" id="txtAvgMarks" readonly></td></tr>
+					
+				
+			
+	</body>
+</html>
